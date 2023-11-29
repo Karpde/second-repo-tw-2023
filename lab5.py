@@ -24,8 +24,8 @@ class File():
         return f"Your file: {self.name}.{self.extension}, Size: {self.size} bytes"
 
     def __repr__(self):
-        return f"Your file: '{self.name}' '{self.extension}' {self.size} bytes"
-
+        return f"File({self.name}, {self.extension}, {self.size})"
+ 
     def __del__(self):
         print(f"Your file: {self.name}.{self.extension} deleted.")
 
@@ -65,8 +65,8 @@ if __name__ == "__main__" :
     file1 = File("lab5", "py", 67)
 
     print(file1.get_info())
-    print(file1.__str__)
-    print(file1.__repr__)
+    print(file1.__str__())
+    print(file1.__repr__())
 
 
     new_file = File("doc", "txt", 56)
